@@ -42,7 +42,7 @@ contract TestThrow() {
   function TestThrow() {
     Trower thrower = new Trower();
     //Set Thrower as the contract to forward request to. The Target
-    ThrowProxy throwProxy = new ThrowProxy(address(trower));
+    ThrowProxy throwProxy = new ThrowProxy(address(thrower));
 
     //prime the proxy
     Thrower(address(throwProxy)).doThrow();
